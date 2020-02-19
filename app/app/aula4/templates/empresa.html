@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/estilo.css">
+    <title>{{titulo}}</title>
+</head>
+<body>
+    <h1>Empresa</h1>
+    <a href="/cadastro-empresa">Cadastrar Nova</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CNPJ</th>
+                <th>Descricao</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in empresas %}
+                <tr>
+                    <td>{{e.nome}}</td>
+                    <td>{{e.cnpj}}</td>
+                    <td>{{e.descricao}}</td>
+                </tr>               
+            {% endfor %} 
+        </tbody>
+    </table>    
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
